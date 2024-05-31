@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Nautilus Corp</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		
+			<div id="page-wrapper">
+
+				
+					<header id="header" class="alt">
+						<h1><a href="index.html">Nautilus Corp</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+				
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h2>Login</h2>
+							<form id="loginForm">
+								<div class="row gtr-uniform gtr-50">
+									<div class="col-12">
+										<input type="text" name="username" id="username" placeholder="Username" required />
+									</div>
+									<div class="col-12">
+										<input type="password" name="password" id="password" placeholder="Password" required />
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="button" value="Login" class="primary" onclick="validateLogin()" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</div>
+					</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				function validateLogin() {
+					const predefinedUsername = 'admin';
+					const predefinedPassword = 'admin';
+					
+					const username = document.getElementById('username').value;
+					const password = document.getElementById('password').value;
+					
+					if (username === predefinedUsername && password === predefinedPassword) {
+						window.location.href = 'docker.html';
+					} else {
+						alert('Invalid username or password');
+					}
+				}
+			</script>
+
+	</body>
+</html>
